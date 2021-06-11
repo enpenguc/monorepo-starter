@@ -1,0 +1,33 @@
+{
+  "name": "providers-graphql",
+  "version": "0.0.1",
+  "description": "providers graphql",
+  "keywords": [
+    "provider",
+    "graphql"
+  ],
+  "author": "enpeng <enpenguc@163.com>",
+  "homepage": "https://github.com/enpenguc/defi-exchange-connect#readme",
+  "license": "ISC",
+  "main": "lib/providers-graphql.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enpenguc/defi-exchange-connect.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/enpenguc/defi-exchange-connect/issues"
+  }
+}
