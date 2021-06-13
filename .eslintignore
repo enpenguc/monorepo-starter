@@ -1,0 +1,9 @@
+node_modules
+dist
+# config
+.eslintrc.js
+rollup.config.js
+# test
+__tests__
+test
+tmp
