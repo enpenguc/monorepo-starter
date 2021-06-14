@@ -6,7 +6,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "declaration": true,
-    "declarationDir": ".",
     "allowJs": true,
     "strict": true,
     "noUnusedLocals": true,
@@ -23,7 +22,6 @@
     "types": [
       "node"
     ],
-    "rootDir": ".",
     "paths": {}
   },
   "exclude": [

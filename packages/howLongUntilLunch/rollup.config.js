@@ -16,7 +16,7 @@ export default [
     plugins: [
       // typescript(),
       typescript({
-        tsconfig: "./tsconfig.build.json",
+        tsconfig: "./tsconfig.json",
         sourceMap: true,
       }),
       resolve(), // so Rollup can find `ms`
@@ -36,7 +36,7 @@ export default [
     // external: ['ms'],
     plugins: [
       typescript({
-        tsconfig: "./tsconfig.build.json",
+        tsconfig: "./tsconfig.json",
         sourceMap: true,
       }),
     ],

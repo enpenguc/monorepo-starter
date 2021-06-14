@@ -1,9 +1,13 @@
 {
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
+    "rootDir": ".",
     "baseUrl": ".",
+    "declarationDir": ".",
     "paths": {
-      "@dfe-connect/*": ["packages/*/src"]
+      "@dfe-connect/*": [
+        "packages/*/src"
+      ]
     }
   }
 }
