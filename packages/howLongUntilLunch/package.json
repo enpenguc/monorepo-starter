@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "enpeng <enpenguc@163.com>",
-  "homepage": "https://github.com/enpenguc/defi-exchange-connect#readme",
+  "homepage": "https://github.com/enpenguc/monorepo-starter#readme",
   "license": "ISC",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
-  "typings": "dist/index.d.ts",
+  "typings": "dist/types/index.d.ts",
   "directories": {
     "lib": "dist",
     "test": "__tests__"
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enpenguc/defi-exchange-connect.git"
+    "url": "git+https://github.com/enpenguc/monorepo-starter.git"
   },
   "scripts": {
     "dev": "rollup -c -w",
@@ -32,7 +32,7 @@
     "test": "node test/test.js"
   },
   "bugs": {
-    "url": "https://github.com/enpenguc/defi-exchange-connect/issues"
+    "url": "https://github.com/enpenguc/monorepo-starter/issues"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.1",

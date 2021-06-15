@@ -6,7 +6,7 @@
     "callback"
   ],
   "author": "enpeng <enpenguc@163.com>",
-  "homepage": "https://github.com/enpenguc/defi-exchange-connect#readme",
+  "homepage": "https://github.com/enpenguc/monorepo-starter#readme",
   "license": "ISC",
   "main": "dist/callback.cjs.js",
   "module": "dist/callback.esm.js",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enpenguc/defi-exchange-connect.git"
+    "url": "git+https://github.com/enpenguc/monorepo-starter.git"
   },
   "scripts": {
     "dev": "rollup -c -w",
@@ -35,7 +35,7 @@
     "test": "node test/test.js"
   },
   "bugs": {
-    "url": "https://github.com/enpenguc/defi-exchange-connect/issues"
+    "url": "https://github.com/enpenguc/monorepo-starter/issues"
   },
   "dependencies": {
     "@dec/utils": "*"
