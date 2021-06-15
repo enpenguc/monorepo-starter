@@ -32,20 +32,20 @@ export default [
   // builds from a single configuration where possible, using
   // an array for the `output` option, where we can specify
   // `file` and `format` for each target)
-  // {
-  //   input: 'src/index.ts',
-  //   // external: Object.keys(pkg.dependencies || {}),
-  //   external: ['ms'],
-  //   plugins: [
-  //     resolve(),
-  //     typescript({
-  //       tsconfig: "./tsconfig.json",
-  //       sourceMap: true,
-  //     }),
-  //   ],
-  //   output: [
-  //     { file: pkg.main, format: 'cjs', sourcemap: true },
-  //     { file: pkg.module, format: 'esm', sourcemap: true }
-  //   ]
-  // }
+  {
+    input: 'src/index.ts',
+    external: Object.keys(pkg.dependencies || {}),
+    // external: ['ms'],
+    plugins: [
+      resolve(),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        sourceMap: true,
+      }),
+    ],
+    output: [
+      { file: pkg.main, format: 'cjs', sourcemap: true },
+      { file: pkg.module, format: 'esm', sourcemap: true }
+    ]
+  }
 ];
