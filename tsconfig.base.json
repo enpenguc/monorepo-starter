@@ -6,6 +6,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "declaration": true,
+    "declarationDir": ".",
     "allowJs": true,
     "strict": true,
     "noUnusedLocals": true,
@@ -19,20 +20,17 @@
       "esnext",
       "dom"
     ],
-    "baseUrl": ".",
+    "types": [
+      "node"
+    ],
     "paths": {
-      "@dec/utils": [
-        "packages/utils"
+      "@defi-exchange-connect/*": [
+        "./packages/*/src"
       ]
     }
   },
   "exclude": [
     "dist",
-    "node_modules",
-    "**/*.spec.ts"
-  ],
-  "include": [
-    "packages/**/*",
-    "src/**/*"
+    "node_modules"
   ]
 }
