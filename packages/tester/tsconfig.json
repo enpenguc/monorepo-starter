@@ -2,10 +2,5 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "declarationDir": "./types",
-    "paths": {
-      "@decsfsfsdf/utils": [
-        "./packagesasdas/utils"
-      ]
-    }
   }
 }

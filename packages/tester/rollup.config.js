@@ -18,11 +18,6 @@ export default [
       typescript({
         tsconfig: "./tsconfig.json",
         sourceMap: true,
-        // paths: {
-        //   "@dec/utils": [
-        //     "../../packages/utils"
-        //   ]
-        // }
       }),
       resolve({
         // rootDir: './../packages'
@@ -47,11 +42,6 @@ export default [
       typescript({
         tsconfig: "./tsconfig.json",
         sourceMap: true,
-        // paths: {
-        //   "@dec/utils": [
-        //     "../../packages/utils"
-        //   ]
-        // }
       }),
     ],
     output: [

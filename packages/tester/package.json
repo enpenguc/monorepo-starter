@@ -1,5 +1,5 @@
 {
-  "name": "tester",
+  "name": "@monorepo-starter/tester",
   "version": "0.0.1",
   "description": "tester",
   "keywords": [
@@ -38,7 +38,7 @@
     "url": "https://github.com/enpenguc/monorepo-starter/issues"
   },
   "dependencies": {
-    "@dec/utils": "*"
+    "@monorepo-starter/utils": "*"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.1",

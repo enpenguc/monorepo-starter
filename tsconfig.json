@@ -20,7 +20,11 @@
       "dom"
     ],
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@monorepo-starter/*": [
+        "packages/*"
+      ]
+    }
   },
   "exclude": [
     "dist",
