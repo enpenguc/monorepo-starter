@@ -24,6 +24,7 @@
   },
   "scripts": {
     "postinstall": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap",
     "dev": "lerna exec -- npm run dev",
     "build": "lerna run build",
     "pub": "lerna publish",

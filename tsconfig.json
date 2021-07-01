@@ -20,11 +20,7 @@
       "dom"
     ],
     "baseUrl": ".",
-    "paths": {
-      "@dec/utils": [
-        "packages/utils"
-      ]
-    }
+    "paths": {}
   },
   "exclude": [
     "dist",

@@ -1,17 +1,17 @@
 {
-  "name": "callback",
+  "name": "tester",
   "version": "0.0.1",
-  "description": "callback",
+  "description": "tester",
   "keywords": [
-    "callback"
+    "tester"
   ],
   "author": "enpeng <enpenguc@163.com>",
   "homepage": "https://github.com/enpenguc/monorepo-starter#readme",
   "license": "ISC",
-  "main": "dist/callback.cjs.js",
-  "module": "dist/callback.esm.js",
-  "browser": "dist/callback.umd.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/tester.cjs.js",
+  "module": "dist/tester.esm.js",
+  "browser": "dist/tester.umd.js",
+  "typings": "dist/types/index.d.ts",
   "directories": {
     "lib": "dist",
     "test": "__tests__"

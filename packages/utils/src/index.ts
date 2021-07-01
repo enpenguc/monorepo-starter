@@ -9,6 +9,7 @@ export const isNumber = (value: any): boolean => {
   }
   return !Number.isNaN(Number(value));
 };
+
 /**
  * 延迟执行
  * @param timeout 延迟的毫秒数

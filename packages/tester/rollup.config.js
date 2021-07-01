@@ -18,8 +18,14 @@ export default [
       typescript({
         tsconfig: "./tsconfig.json",
         sourceMap: true,
+        // paths: {
+        //   "@dec/utils": [
+        //     "../../packages/utils"
+        //   ]
+        // }
       }),
       resolve({
+        // rootDir: './../packages'
         // browser: true,
       }), // so Rollup can find `ms`
       commonjs() // so Rollup can convert `ms` to an ES module
@@ -34,13 +40,18 @@ export default [
   // `file` and `format` for each target)
   {
     input: 'src/index.ts',
-    external: Object.keys(pkg.dependencies || {}),
-    // external: ['ms'],
+    // external: Object.keys(pkg.dependencies || {}),
+    external: ['ms'],
     plugins: [
       resolve(),
       typescript({
         tsconfig: "./tsconfig.json",
         sourceMap: true,
+        // paths: {
+        //   "@dec/utils": [
+        //     "../../packages/utils"
+        //   ]
+        // }
       }),
     ],
     output: [

@@ -1,4 +1,6 @@
+// import { isNumber } from 'utils';
 import { isNumber } from '@dec/utils';
+// import { isNumber } from '@dec/utils';
 // import { isNumber } from '../../utils';
 
 console.log(typeof isNumber);
