@@ -2,17 +2,20 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist",
-    "sourceMap": false,
+    "sourceMap": true,
+    "inlineSources": false,
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
     "declaration": true,
+    "declarationDir": ".",
     "allowJs": true,
     "strict": true,
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "removeComments": false,
     "jsx": "preserve",
     "lib": [
@@ -22,13 +25,13 @@
     "types": [
       "node"
     ],
-    "rootDir": ".",
     "paths": {}
   },
   "exclude": [
-    "dist"
+    "dist",
+    "node_modules"
   ],
   "include": [
-    "./src/**/*.ts"
+    "src/**/*.ts"
   ]
 }

@@ -8,15 +8,16 @@ export default [
   {
     input: 'src/main.ts',
     output: {
-      name: 'howLongUntilLunch',
+      name: 'main',
       file: pkg.browser,
-      format: 'umd'
+      format: 'umd',
+      sourcemap: true,
     },
     plugins: [
       typescript(),
       resolve(), // so Rollup can find `ms`
-      commonjs() // so Rollup can convert `ms` to an ES module
-    ]
+      commonjs(), // so Rollup can convert `ms` to an ES module
+    ],
   },
 
   // CommonJS (for Node) and ES module (for bundlers) build.
@@ -27,13 +28,16 @@ export default [
   // `file` and `format` for each target)
   {
     input: 'src/main.ts',
-    external: ['ms'],
+    // external: ['ms'],
+    external: Object.keys(pkg.dependencies || {}),
     plugins: [
-      typescript(),
+      typescript({
+        tsconfig: './tsconfig.json',
+      }),
     ],
     output: [
       { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' }
-    ]
-  }
+      { file: pkg.module, format: 'es' },
+    ],
+  },
 ];
