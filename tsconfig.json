@@ -8,7 +8,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "declaration": true,
-    "declarationDir": ".",
+    "declarationMap": false, // enables importers to jump to source
+    "declarationDir": "./types",
     "allowJs": true,
     "strict": true,
     "noUnusedLocals": true,

@@ -22,3 +22,5 @@ export async function delay(timeout: number): Promise<void> {
     }, timeout);
   });
 }
+
+export const dd = 333;

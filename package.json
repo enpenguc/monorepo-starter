@@ -1,5 +1,5 @@
 {
-  "name": "rollup-starter-lib",
+  "name": "lib-starter",
   "version": "1.0.0",
   "description": "rollup starter lib",
   "private": true,
@@ -17,10 +17,11 @@
     "src",
     "dist"
   ],
-  "main": "dist/main.cjs.js",
-  "module": "dist/main.esm.js",
-  "browser": "dist/main.umd.js",
-  "typings": "dist/main.d.ts",
+  "entry": "src/index.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "typings": "dist/types/index.d.ts",
   "directories": {
     "test": "test"
   },
@@ -51,18 +52,22 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "preinstall": "node ./scripts/checkYarn.js",
+    "postinstall": "husky install",
     "pretest": "npm run build",
-    "prepare": "husky install",
-    "install": "yarn && yarn run prepare",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "node test/test.js",
     "prettier": "prettier --write '**/*.{ts,tsx,json,md}' --config .prettierrc.yml",
     "lint-fix": "eslint --fix ./src --ext .js,.ts"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,ts}": [
-      "prettier --write",
+      "prettier --write --config .prettierrc.yml",
       "eslint --fix"
     ]
   }
