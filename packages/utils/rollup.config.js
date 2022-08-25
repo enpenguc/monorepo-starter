@@ -1,7 +1,13 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
+import babel from '@rollup/plugin-babel';
+import { DEFAULT_EXTENSIONS } from '@babel/core';
+import { terser } from 'rollup-plugin-terser';
+import fileSize from 'rollup-plugin-filesize';
 import pkg from './package.json';
+
+const isProd = process.env.NODE_ENV === 'production';
 
 export default [
   // browser-friendly UMD build
@@ -14,13 +20,23 @@ export default [
       sourcemap: true,
     },
     plugins: [
-      // typescript(),
       typescript({
         tsconfig: "./tsconfig.json",
         sourceMap: true,
       }),
       resolve(), // so Rollup can find `ms`
-      commonjs() // so Rollup can convert `ms` to an ES module
+      commonjs(), // so Rollup can convert `ms` to an ES module
+      babel({
+        babelHelpers: 'bundled',
+        extensions: [
+          ...DEFAULT_EXTENSIONS,
+          'ts',
+          'tsx',
+        ],
+        exclude: 'node_modules/**'
+      }),
+      isProd && terser(),
+      fileSize(),
     ]
   },
 
@@ -38,6 +54,16 @@ export default [
         tsconfig: "./tsconfig.json",
         sourceMap: true,
       }),
+      fileSize(),
+      // babel({
+      //   babelHelpers: 'bundled',
+      //   extensions: [
+      //     ...DEFAULT_EXTENSIONS,
+      //     'ts',
+      //     'tsx',
+      //   ],
+      //   exclude: 'node_modules/**'
+      // }),
     ],
     output: [
       { file: pkg.main, format: 'cjs', sourcemap: true },

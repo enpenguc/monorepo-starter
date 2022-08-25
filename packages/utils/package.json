@@ -20,31 +20,39 @@
     "dist"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.com/"
+    "registry": "http://npm.test.com/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enpenguc/monorepo-starter.git"
+    "url": "git+https://github.com/enpenguc/monorepo-starter.git",
+    "directory": "packages/utils"
   },
   "scripts": {
     "dev": "rollup -c -w",
     "clean": "rimraf -rf dist coverage",
     "coverage": "jest --coverage",
-    "compile": "rollup -c",
+    "compile": "cross-env NODE_ENV=production rollup -c",
     "build": "yarn run clean && yarn run compile",
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "prepublish": "yarn build"
   },
   "bugs": {
     "url": "https://github.com/enpenguc/monorepo-starter/issues"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.1",
-    "@rollup/plugin-node-resolve": "^7.0.0",
-    "@rollup/plugin-typescript": "^8.2.1",
-    "@typescript-eslint/eslint-plugin": "^4.22.1",
-    "@typescript-eslint/parser": "^4.22.1",
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "cross-env": "^7.0.3",
     "rimraf": "^3.0.2",
-    "rollup": "^2.51.2",
-    "typescript": "^4.2.4"
+    "rollup": "^2.78.1",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.7.4"
   }
 }
